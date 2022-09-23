@@ -13,7 +13,7 @@ export default function Footprint() {
             <HeadInfo path="/" />
             <Container>
                 <FootprintDisplay usage={usage}/>
-                <CarbonInput {...{addUsage, addTravel, addFood, addHouseUsage}} />
+                <CarbonInput {...{addTravel, addFood, addHouseUsage}} />
             </Container>
         </>
     )

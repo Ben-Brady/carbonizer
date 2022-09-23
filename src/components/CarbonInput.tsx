@@ -4,12 +4,13 @@ import HouseInput from "components/HouseInput";
 import FoodInput from "components/FoodInput";
 import styled from "styled-components";
 
-export default function CarbonInput({ addTravel, addHouseUsage, addFood, addUsage }) {
+export default function CarbonInput({ addTravel, addHouseUsage, addFood }) {
     return (
         <Contianer>
             <TravelInput addTravel={addTravel} />
             <HouseInput addHouseUsage={addHouseUsage} />
-            <FoodInput addFoodUsage={addFood} />
+            {/* Can't Get To Work */}
+            {/* <FoodInput addFoodUsage={addFood} /> */}
         </Contianer>
     )
 }
@@ -47,5 +48,9 @@ const Contianer = styled.div`
     & > div > div{
         display: grid;
         grid-template-columns: 1fr 5rem;
+        
+        @media (max-width: 1200px){
+            grid-template-columns: 1fr 2rem;
+        }
     }
 `;
