@@ -1,8 +1,7 @@
 import useCarbonUsage from "hooks/carbonHook";
 import React, { useRef, } from "react"
 
-export default function TravelInput({ addTravel, addUsage}) {
-    
+export default function FoodInput({ addFoodUsage }) {
     let methodRef = useRef();
     let distanceRef = useRef();
 
@@ -17,13 +16,21 @@ export default function TravelInput({ addTravel, addUsage}) {
     
     return (
         <div>
-            <input type="number" ref={distanceRef} defaultValue={0}/>
-            <select ref={methodRef}>
-                <option value="car">Car</option>
-                <option value="plane">Plane</option>
-                <option value="bus">Bus</option>
-                <option value="train">Train</option>
-            </select>
+            <span>Food Usage</span>
+            <div>
+                <label>Organic food (Percentage)</label>
+                <select>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label>Diary Amount (Percentage)</label>
+                <input type="number" defaultValue={0}/>
+            </div>
+            <div>
+                <label>Locally Producted (Percentage)</label>
+                <input type="number" defaultValue={0}/>
+            </div>
             <button onClick={addTravelCallback}>Add Travel</button>
         </div>
     )

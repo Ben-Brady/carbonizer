@@ -23,15 +23,19 @@ export default function TravelInput({ addHouseUsage }) {
     return (
         <div>
             <span>
-                Travel
+                Home Usage
             </span>
             <div>
                 <label >Occupants: </label>
                 <input type="number" ref={occupantRef} defaultValue="2" min="0"/>
             </div>
-                <label >Energy Usage: </label>
-                <input type="number" ref={energyRef} defaultValue="2" min="0"/>
             <div>
+                <label >Energy Usage (KWh): </label>
+                <input type="number" ref={energyRef} defaultValue="0" min="0"/>
+            </div>
+            <div>
+                <label >Gas Usage (KWh): </label>
+                <input type="number" ref={gasRef} defaultValue="0" min="0"/>
             </div>
             <button onClick={addTravelCallback}>Calculate</button>
         </div>

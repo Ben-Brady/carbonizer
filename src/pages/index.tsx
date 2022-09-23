@@ -6,14 +6,14 @@ import useCarbonUsage from "hooks/carbonHook";
 import styled from "styled-components";
 
 export default function Footprint() {
-    let { usage, addTravel, addUsage } = useCarbonUsage();
+    let { usage, addTravel, addUsage, addFood, addHouseUsage } = useCarbonUsage();
 
     return (
         <>
             <HeadInfo path="/" />
             <Container>
                 <FootprintDisplay usage={usage}/>
-                <CarbonInput addUsage={addUsage} addTravel={addTravel} />
+                <CarbonInput {...{addUsage, addTravel, addFood, addHouseUsage}} />
             </Container>
         </>
     )

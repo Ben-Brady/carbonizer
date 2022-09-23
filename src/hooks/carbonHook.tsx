@@ -31,7 +31,7 @@ export default function useCarbonUsage() {
     }
 
 
-    async function addHouse(occupants: number, energyUsage: number, gasUsage: number) {
+    async function addHouseUsage(occupants: number, energyUsage: number, gasUsage: number) {
         let params = new URLSearchParams();
         params.set("occupants", occupants.toString());
         params.set("energyUsage", energyUsage.toString());
@@ -59,5 +59,5 @@ export default function useCarbonUsage() {
         addUsage(emissions)
     }
 
-    return { usage: carbonUsage, addUsage, addTravel, addFood, addHouse};
+    return { usage: carbonUsage, addUsage, addTravel, addFood, addHouseUsage};
 }

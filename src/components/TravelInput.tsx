@@ -2,7 +2,7 @@ import useCarbonUsage from "hooks/carbonHook";
 import React, { useRef, } from "react"
 import styled from "styled-components";
 
-export default function TravelInput({ addTravel, addUsage}) {
+export default function TravelInput({ addTravel }) {
     
     let methodRef = useRef();
     let distanceRef = useRef();
@@ -21,7 +21,7 @@ export default function TravelInput({ addTravel, addUsage}) {
     return (
         <div>
             <span>
-                Travel
+                Travel Usage
             </span>
             <div>
                 <label >Distance (km): </label>
